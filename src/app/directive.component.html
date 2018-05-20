@@ -1,0 +1,21 @@
+<input [(ngModel)]="value">
+<p>{{value}}</p>
+<hr>
+<input (input)="eventToComponent=$event.target.value">
+<p>{{eventToComponent}}</p>
+<hr>
+<input [value]="componentToProperty">
+<hr>
+<input type="button" value="Choose"
+       (click)="status=!status">
+<hr>
+<p *ngIf="status">
+    P1
+</p>
+<hr>
+<p *ngIf="!status">
+    P2
+</p>
+<hr>
+<ul *ngFor="let text of texts">{{text}}</ul>
+<hr>
